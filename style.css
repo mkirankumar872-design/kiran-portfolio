@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #4b5563;
+  --accent: #2563eb;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.site-header {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.site-header h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.site-header p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.hero {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  margin-top: -40px;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.projects {
+  margin-top: 32px;
+}
+
+.project-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+  padding: 24px;
+  background: var(--surface);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.06);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+}
+
+.dark {
+  --bg: #0f172a;
+  --surface: #111827;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #60a5fa;
+}
