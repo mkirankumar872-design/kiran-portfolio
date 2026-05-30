@@ -2,44 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kiran Kumar | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M Kiran Kumar | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Kiran Kumar</h1>
-      <p>Frontend developer & designer building clean, modern web experiences.</p>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Welcome!</h2>
-      <p>This portfolio is now ready to deploy with GitHub Pages.</p>
-      <button id="themeButton">Toggle theme</button>
-    </section>
+  <!-- Navbar -->
 
-    <section class="projects">
-      <h3>Featured Work</h3>
-      <div class="project-grid">
-        <article class="project-card">
-          <h4>Portfolio Website</h4>
-          <p>Responsive portfolio built with HTML, CSS, and JavaScript.</p>
-        </article>
-        <article class="project-card">
-          <h4>UI Design</h4>
-          <p>Smooth, modern layouts for web and mobile interfaces.</p>
-        </article>
+  <nav>
+    <h2>KIRAN</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <h3>Hello, I'm</h3>
+
+      <h1>MUDDUSETTI <span>KIRAN KUMAR</span></h1>
+
+      <h2 class="typing"></h2>
+
+      <p>
+        Passionate Full Stack Developer focused on building modern,
+        responsive, and user-friendly web experiences.
+      </p>
+
+      <div class="buttons">
+        <a href="#contact" class="btn">Contact Me</a>
+
+        <a href="https://github.com/mkirankumar872-design" target="_blank" class="btn-outline">
+          GitHub
+        </a>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer class="site-footer">
-    <p>© 2026 Kiran Kumar</p>
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Kiran Kumar">
+    </div>
+
+  </section>
+
+  <!-- About -->
+
+  <section id="about">
+
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        Passionate Full Stack Developer focused on building modern,
+        responsive, and user-friendly web experiences. I enjoy
+        transforming ideas into real-world digital solutions using
+        clean code and creative design.
+
+        Skilled in frontend and backend technologies including
+        HTML, CSS, JavaScript, Java, Python, and SQL, I continuously
+        explore new technologies to improve performance,
+        usability, and innovation.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+
+  <section id="skills">
+
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills-container">
+
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Python</div>
+
+    </div>
+
+  </section>
+
+  <!-- Education -->
+
+  <section id="education">
+
+    <div class="section-title">
+      <h2>Education</h2>
+    </div>
+
+    <div class="education-card">
+
+      <h3>Madanapalle Institute of Technology and Science</h3>
+
+      <p>
+        Full Stack Development & Computer Science Enthusiast
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+
+    <div class="contact-container">
+
+      <div class="contact-card">
+        <h3>Email</h3>
+
+        <p>
+          <a href="mailto:mkirankumar872@gmail.com">
+            mkirankumar872@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Location</h3>
+        <p>Madanapalle</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>LinkedIn</h3>
+
+        <p>
+          <a href="https://www.linkedin.com/in/m-kiran-kumar/" target="_blank">
+            View Profile
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h3>GitHub</h3>
+
+        <p>
+          <a href="https://github.com/mkirankumar872-design" target="_blank">
+            View GitHub
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    <p>© 2026 M Kiran Kumar | Full Stack Developer</p>
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
