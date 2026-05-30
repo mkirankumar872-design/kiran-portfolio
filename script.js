@@ -1,38 +1,61 @@
-const typingElement = document.querySelector('.typing');
-const phrases = [
+const roles = [
   'Full Stack Developer',
-  'Responsive Web Creator',
+  'Responsive Web Designer',
+  'Frontend Specialist',
   'JavaScript Enthusiast',
-  'Problem Solver',
 ];
-let phraseIndex = 0;
-let characterIndex = 0;
+const typingElement = document.querySelector('.typing');
+const navLinks = document.querySelectorAll('.main-nav a');
+const sections = document.querySelectorAll('main section[id]');
+let currentRole = 0;
+let currentChar = 0;
 let deleting = false;
 
 function updateTyping() {
-  const currentPhrase = phrases[phraseIndex];
   if (!typingElement) return;
-
+  const role = roles[currentRole];
   if (deleting) {
-    characterIndex -= 1;
-    typingElement.textContent = currentPhrase.slice(0, characterIndex);
-    if (characterIndex <= 0) {
+    currentChar -= 1;
+    typingElement.textContent = role.slice(0, currentChar);
+    if (currentChar <= 0) {
       deleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
+      currentRole = (currentRole + 1) % roles.length;
     }
   } else {
-    characterIndex += 1;
-    typingElement.textContent = currentPhrase.slice(0, characterIndex);
-    if (characterIndex >= currentPhrase.length) {
+    currentChar += 1;
+    typingElement.textContent = role.slice(0, currentChar);
+    if (currentChar >= role.length) {
       deleting = true;
     }
   }
-
-  const speed = deleting ? 80 : 120;
-  const pause = deleting ? 200 : 2000;
-  setTimeout(updateTyping, deleting ? speed : (characterIndex === currentPhrase.length ? pause : speed));
+  const delay = deleting ? 80 : currentChar === role.length ? 1800 : 120;
+  setTimeout(updateTyping, delay);
 }
 
-if (typingElement) {
+function updateActiveNav() {
+  const scrollY = window.scrollY + 120;
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const link = document.querySelector(`.main-nav a[href="#${section.id}"]`);
+    if (!link) return;
+    if (scrollY >= top && scrollY < top + height) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const typedText = document.createElement('span');
+  typedText.className = 'typing';
+  const heroHeading = document.querySelector('.hero-copy');
+  if (heroHeading) {
+    heroHeading.insertBefore(typedText, heroHeading.querySelector('.hero-actions'));
+  }
   updateTyping();
-}
+  updateActiveNav();
+});
+
+window.addEventListener('scroll', updateActiveNav);
